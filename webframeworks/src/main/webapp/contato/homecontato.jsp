@@ -1,19 +1,36 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<!DOCTYPE html>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Posts</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+<jsp:include page="/template/header.jsp"/>
+     <br>
+     <br>
+     <br>  
+     <div id="top" class="row">
+ 		<div class="col-md-3">
+        <h2>Contatos</h2>
+	    </div>
+	 
+	    <div class="col-md-6">
+	       <!--   <div class="input-group h2">
+	            <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Contatos">
+	            <span class="input-group-btn">
+	                <button class="btn btn-primary" type="submit">
+	                    <span class="glyphicon glyphicon-search"></span>
+	                </button>
+	            </span>
+	        </div>-->
+	    </div>
+	 
+	    <div class="col-md-3">
+	        <a href="/contato/cadastro" class="btn btn-primary pull-right h2">Novo Contato</a>
+	    </div>
+     </div> <!-- /#top -->
+ 
+     <hr />
+
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>Posts</strong>
+			<strong>Contatos</strong>
 		</div>
 		<div class="panel-body">
 			<div class="table-responsive">
@@ -36,7 +53,7 @@
 								<td>${contato.email}</td>
 								<td>	
 									<a class="btn btn-sm btn-success" href="/contato/viewContato?id=${contato.id}" >Atualizar</a>
-									<a class="btn btn-sm btn-success" href="/contato/delete?id=${contato.id}" >Remover</a>
+									<a class="btn btn-sm btn-danger" href="/contato/delete?id=${contato.id}" >Remover</a>
 								</td>						
 							</tr>
 						</c:forEach>
@@ -48,5 +65,5 @@
 			
 		</div>
 	</div>
-</body>
-</html>
+	
+<jsp:include page="/template/footer.jsp"/>

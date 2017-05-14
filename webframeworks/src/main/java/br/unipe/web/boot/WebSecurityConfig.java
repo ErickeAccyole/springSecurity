@@ -47,7 +47,7 @@ private CustomAuthenticationProvider authProvider;
 	 .and()
 	 .logout()
 		 .logoutUrl("/logout")
-	     .logoutSuccessUrl("/login?logout")
+	     .logoutSuccessUrl("/?logout")
 	     .invalidateHttpSession(true)
 	     .permitAll()
 	 .and().csrf().disable();

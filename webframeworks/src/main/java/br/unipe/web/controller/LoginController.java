@@ -15,21 +15,10 @@ import br.unipe.web.model.UsuarioModel;
 @RequestMapping("/")
 public class LoginController {
 	
-	@Autowired
-	private UsuarioDAO repositorio;
-	
 	@RequestMapping("/")
 	public String exibeLogin(){
 			
 		return "login";
 	}
-		
-	public UsuarioDAO getRepositorio() {
-		return repositorio;
-	}
-
-	public void setRepositorio(UsuarioDAO repositorio) {
-		this.repositorio = repositorio;
-	}	
 
 }
