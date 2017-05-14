@@ -31,7 +31,7 @@ public class ContatoController {
 		
 		model.addAttribute("contatos",contatos);
 				
-		return "homecontato";
+		return "contato/homecontato";
 	}
 	
 	
