@@ -64,5 +64,6 @@ local.properties
 target/
 
 ### Maven ###
-pom.properties
+target/classes/META-INF/maven/br.unipe.pos/webframeworks/pom.properties
+
 # End of https://www.gitignore.io/api/eclipse,java-web
